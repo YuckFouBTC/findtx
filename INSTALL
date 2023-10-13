@@ -1,0 +1,22 @@
+How to install:
+
+citadel@citadel:~₿ git clone https://github.com/YuckFouBTC/findtx.git
+Cloning into 'findtx'...
+remote: Enumerating objects: 19, done.
+remote: Counting objects: 100% (19/19), done.
+remote: Compressing objects: 100% (19/19), done.
+remote: Total 19 (delta 6), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (19/19), 5.18 KiB | 5.18 MiB/s, done.
+Resolving deltas: 100% (6/6), done.
+citadel@citadel:~₿ cd findtx/
+citadel@citadel:~/findtx₿ chmod ugo+x findtx.sh
+citadel@citadel:~/findtx₿ cd
+citadel@citadel:~₿ pwd
+/home/citadel
+citadel@citadel:~₿ sudo ln -s /home/citadel/findtx/findtx.sh /usr/local/bin/findtx
+citadel@citadel:~₿ findtx
+Error: no tx hash provided
+
+USAGE: findtx <tx_hash>
+The tx_hash is the hash of the transaction on the bitcoin blockchain.
+citadel@citadel:~₿

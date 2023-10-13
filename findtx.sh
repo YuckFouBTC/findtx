@@ -4,7 +4,10 @@
 if [ -z "$1" ]; then
   echo "Error: no tx hash provided"
   echo ""
-  echo "USAGE: $0 <tx_hash>"
+  echo -n "USAGE: "
+  filepath=$0
+  scriptname=$(basename "$filepath")
+  echo "$scriptname <tx_hash>"
   echo "The tx_hash is the hash of the transaction on the bitcoin blockchain."
   exit 1
 fi
@@ -20,4 +23,3 @@ output=$(docker exec -it lnd-service-1 lncli listchaintxns --start_height $heigh
 
 # Print output formatted with jq
 echo "$output" | jq
-

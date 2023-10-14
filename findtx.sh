@@ -2,7 +2,7 @@
 
 # Check that tx hash was provided as first argument
 if [ -z "$1" ]; then
-  echo "Error: no tx hash provided"
+  echo "Error: no <tx_hash> provided"
   echo ""
   echo -n "USAGE: "
   filepath=$0
